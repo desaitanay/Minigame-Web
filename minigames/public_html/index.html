@@ -1,0 +1,78 @@
+<!-- 
+Login Page HTML
+Login / Account Creation.
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <title>MG Login</title>
+    </head>
+    <body>
+        <div id="banner">
+            <h1 id="bannertext">Mini Games Login</h1>
+        </div>
+
+        <div id="divider1"></div>
+        <div id="divider2"></div>
+
+        <div id="logblock">
+            <h1 id="logTitle">Login</h1>
+
+            <table id="homeTable">
+                <tr>
+                    <td>
+                        <label for="username">Username: </label>
+                        <input type="text" id="username" class="loginbar">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <label for="password">Password: </label>
+                        <input type="password" id="password" class="loginbar">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <input type="button" onclick=login() value="Login" class="gamebutton">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="createblock">
+            <h1 id="createTitle">Create Account</h1>
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="newUsername">Username: </label>
+                        <input type="text" id="newUsername" class="loginbar">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <label for="newPassword">Password: </label>
+                        <input type="text" id="newPassword" class="loginbar">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <input type="button" onclick=createUser() value="Create" class="gamebutton">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="./client.js"></script>
+    </body>
+</html>

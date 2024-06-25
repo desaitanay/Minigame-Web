@@ -1,0 +1,270 @@
+/*
+	This file provides the initial (flowery) style for the memory game page.
+	This includes stylized leaderboards, background, title, and settings.
+*/
+
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #5899E2;
+	background: linear-gradient(#5899E2,  #FFFFFF);
+}
+
+#columns{
+	display: flex;
+}
+
+/*Header styling*/
+#memoryTitle{
+	width: 100vw;
+	height: 9vh;
+	background-color: black;
+	background: linear-gradient(#9a9a9a, #454545);
+	margin: 0px;
+	text-align: center;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-size: 3vw;
+	padding-top: 1vh;
+}
+
+#homeButton{
+	position: fixed;
+	top: 1vh;
+	left: 3vw;
+	width: 5vw;
+	height: 7vh;
+	font-size: 1vw;
+}
+
+/*Leaderboard styling*/
+#leaderboard{
+	border-right: 1px solid;
+	height: 85vh;
+	width: calc(20vw - 1px);
+	padding-top: 5vh;
+}
+
+#leaderboardContents{
+	position: relative;
+	height: 70%;
+	width: 75%;
+	margin: auto;
+	color: white;
+}
+
+#leaderboardHeaders{
+	background-color: #820298;
+	margin: 0;
+}
+
+#leaderboardTitle{
+	margin: 0;
+	text-align: center;
+	font-family: Bradley Hand, cursive;
+	border: 1px solid;
+	font-size: 1.2vw;
+}
+
+#leaderboardLabels{
+	padding: 10px;
+	font-family: Courier New, monospace;
+	font-size: 0.9vw;
+}
+
+#scoresLabel{
+	float:right;
+}
+
+#leaderboardDisplay{
+	height: 80%;
+	background-color: #FFD700;
+	background: linear-gradient(#F2F3F2, #A0A1A0);
+	width: 100%;
+	margin-bottom: 0;
+	overflow-y: scroll;
+}
+
+.lbSlot{
+	width: 90%;
+	margin: auto;
+	margin-top: 5%;
+	color: #FF5F1F;
+	font-size: 0.8vw;
+	font-family: Comic Sans MS, Comic Sans, cursive;
+
+}
+
+.lbSlotScore{
+	float: right;
+}
+
+
+#leaderboardShowing{
+	margin: 0;
+	background-color: #820298;
+	width: 100%;
+	text-align: center;
+	font-family: Courier New, monospace;
+	font-size: 0.9vw;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+/*Game Area styling*/
+#gameColumn{
+	height: 90vh;
+	width: 60vw;
+}
+
+#gameInfo{
+	display: flex;
+	width: 100%;
+	height: 6vh;
+}
+
+.infoCol{
+	width: 25%;
+	text-align: center;
+	padding-top: 1%;
+	color: white;
+}
+
+.infoCol h2{
+	font-size: 1.3vw;
+}
+
+.infoCol p{
+	font-size: 0.9vw;
+}
+
+.infoCol h2, .infoCol p{
+	display: inline;
+}
+
+#gameDisplay{
+	width: 56vw;
+	height: 82vh;
+	padding-top: 2vh;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+
+.memCard{
+	text-align: center;
+	color: white;
+	font-size: 2vw;
+}
+	
+/*Settings styling*/
+#settingsColumn{
+	border-left: 1px solid;
+	height: 90vh;
+	width: calc(20vw - 1px);
+}
+
+#settingsContents{
+	position: relative;
+	top: 5vh;
+	height: 60vh;
+	width: 75%;
+	margin: auto;
+}
+
+#settingsTitle{
+	margin: 0;
+	text-align: center;
+	font-family: Bradley Hand, cursive;
+	background-color: #228B22;
+	color: white;
+	border: 1px solid;
+	font-size: 1.2vw;
+}
+
+#actualSettings{
+	margin: 0;
+	background-color: #FA86F2;
+	background: linear-gradient(#FA86F2, #B30041);
+	padding: 0.5vw;
+	font-family: Bradley Hand, cursive;
+	font-size: 0.8vw;
+}
+
+#startMem{
+	position: relative;
+	top: 8vh;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	font-size: 2vw;
+	background-color: #228B22;
+	border: 0;
+	color: white;
+}
+
+.memSlider{
+	width: 45%;
+}
+
+#actualSettings div p{
+	margin-bottom: 0px;
+}
+
+#actualSettings div{
+	margin-bottom: 7%;
+}
+
+#partyTitle{
+	margin: 0;
+	margin-top: 1%;
+	text-align: center;
+	font-family: Bradley Hand, cursive;
+	background-color: white;
+	color: grey;
+	border: 1px solid;
+	font-size: 1.2vw;
+}
+
+#partySettings{
+	margin: 0;
+	background-color: yellow;
+	background-image: radial-gradient(yellow, green);
+	padding: 0.5vw;
+	font-family: Bradley Hand, cursive;
+	font-size: 0.8vw;
+}
+
+#partySettings div p{
+	margin-bottom: 0px;
+}
+
+#partySettings div{
+	margin-bottom: 5%;
+}
+
+/*End Game Message styling*/
+#endGameDisplay{
+	position: fixed;
+	top: 30vh;
+	left: 39vw;
+	height: 30vh;
+	width: 20vw;
+	padding: 1vw;
+	background-color: red;
+	font-family: Courier, monospace;
+	visibility: hidden;
+	text-align: center;
+	overflow-wrap: break-word;
+	color: white;
+	border-radius: 1vw;
+}
+
+#endGameDisplay h1{
+	font-size: 2vw;
+}
+
+#endGameDisplay p{
+	font-size: 1vw;
+}

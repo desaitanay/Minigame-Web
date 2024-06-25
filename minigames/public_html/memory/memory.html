@@ -1,0 +1,143 @@
+<!--
+	
+	This file creates the content of the memory card game page. It includes
+	a leaderboard section, a settings section, and a game window.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8">
+		<title>Memory</title>
+		<link rel = "stylesheet"
+			type="text/css"
+			href="./style.css">
+	</head>
+	<body>
+		<h1 id="memoryTitle">MEMORY</h1>
+		<button id="homeButton" onclick="window.location.href='../home.html'">Home</button>
+		<!--Display Leaderboard -->
+		<div id="columns">
+			<div id = "leaderboard" class="memColumn">
+				<div id="leaderboardContents">
+					<div id="leaderboardHeaders">
+						<h2 id="leaderboardTitle">LEADERBOARD</h2>
+						<div id="leaderboardLabels">
+							<span id="userLabel">Username</span>
+							<span id="scoresLabel">Score</span>
+						</div>
+					</div>
+					<div id = "leaderboardDisplay"></div> 
+					
+				</div>
+			</div>
+			
+			<!--Game is played in this div; game info is also here -->
+			<div id="gameColumn" class="memColumn">
+				<div id="gameInfo">
+					<div class="infoCol">
+						<h2>Difficulty:</h2>
+						<p id="diffInfo"></p>
+					</div>
+					<div class="infoCol">
+						<h2>Timer:</h2>
+						<p id="timerInfo"></p>
+					</div>
+					<div class="infoCol">
+						<h2>Time Left:</h2>
+						<p id="timeLeftInfo"></p>
+					</div>
+					<div class="infoCol">
+						<h2># Fails Left:</h2>
+						<p id="failsInfo"></p>
+					</div>
+				</div>
+				<div id="gameDisplay">
+				</div>
+			</div>
+			
+			<!--Settings and start game in this div-->
+			<div id="settingsColumn" class="memColumn">
+				<div id="settingsContents">
+					<h2 id="settingsTitle">SETTINGS</h2>
+					<div id="actualSettings">
+						<div id="memTheme">
+							<p>Theme:</p>
+							<input type="radio" name="theme" id="tranquil" value="Tranquil" onclick="changeTheme()">
+							<label for="tranquil">Tranquil</label>
+							<input type="radio" name="theme" id="extreme" value="EXTREME" onclick="changeTheme()">
+							<label for="extreme">EXTREME</label>
+							<br>
+						</div>
+						
+						<div id="memDiff">
+							<p>Difficulty:</p>
+							<input type="radio" name="diff" id="easy" value="4x4">
+							<label for="easy">Easy</label>
+							<input type="radio" name="diff" id="medium" value="6x4">
+							<label for="medium">Medium</label>
+							<br>
+							<input type="radio" name="diff" id="hard" value="8x4">
+							<label for="hard">Hard</label>
+							<input type="radio" name="diff" id="expert" value="8x6">
+							<label for="expert">Expert</label>
+							<br>
+						</div>
+						
+						<div id="memFails">
+							<label for="numFails">Max Fails:</label>
+							<input type="range" min="0" max="50" value="0" id="numFails" class="memSlider"
+							oninput="this.nextElementSibling.value = this.value">
+							<output>0</output>
+						</div>
+						
+						<div id="memTime">
+							<label for="timeToFinish">Max Time (s):</label>
+							<input type="range" min="10" max="300" value="10" id="timeToFinish" class="memSlider" 
+							oninput="this.nextElementSibling.value = this.value">
+							<output>10</output>
+						</div>
+					</div>
+					<h2 id="partyTitle">Party Modifiers</h2>
+					<div id="partySettings">
+						<div id="discoMode">
+							<p>Disco:</p>
+							<input type="radio" name="disco" id="discoOn" value="DiscoOn">
+							<label for="discoOn">On</label>
+							<input type="radio" name="disco" id="discoOff" value="DiscoOff">
+							<label for="discoOff">Off</label>
+							<br>
+						</div>
+						<div id="bombsMode">
+							<p>Bombs:</p>
+							<input type="radio" name="bombs" id="bombsOn" value="BombsOn">
+							<label for="bombsOn">On</label>
+							<input type="radio" name="bombs" id="bombsOff" value="BombsOff">
+							<label for="bombsOff">Off</label>
+							<br>
+						</div>
+						<div id="hardcoreMode">
+							<p>Hardcore:</p>
+							<input type="radio" name="hardcore" id="hardcoreOn" value="HardcoreOn">
+							<label for="hardcoreOn">On</label>
+							<input type="radio" name="hardcore" id="hardcoreOff" value="HardcoreOff">
+							<label for="hardcoreOff">Off</label>
+							<br>
+						</div>
+					</div>
+					
+					<button type="button" id="startMem" onclick="startGame()">Start Game</button>
+				</div>
+			</div>
+		</div>
+		<!-- Endgame message-->
+		<div id="endGameDisplay">
+			<h1 id="endStatus">FILLER</h1>
+			<p id = "endStats">STATS HERE</p>
+			<p id = "endLB">Send to LB</p>
+		</div>
+		
+		<script src="./client.js">
+		</script>
+	</body>
+</html>

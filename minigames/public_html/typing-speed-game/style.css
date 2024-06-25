@@ -1,0 +1,82 @@
+/*
+   This is the CSS for the typing speed game */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  padding: 40px 0;
+}
+
+.text-input {
+  width: 100%;
+  height: 150px;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.stats p {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.leaderboard {
+  margin-top: 56px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}

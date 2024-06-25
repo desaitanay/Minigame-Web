@@ -1,0 +1,103 @@
+<!--
+Mini-Games Main Page
+
+This HTML file represents the home page of the site, after user login.
+It includes:
+- Section w/ links to each of the games and information:
+    - Asteroids
+    - Memory Cards
+    - Snake
+    - Typing Speed
+    - Help Page (Basic Game Explanations)
+    - Edit Profile Preferences
+
+- Section that displays global high scores.
+
+- Section w/ links to: 
+    - View Friends
+        - Use JS to list friends and their high scores
+    - Search for other players, and add friends
+        - Use JS to display list of friended players
+
+- Section that displays global high scores.
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <title>Mini Games</title>
+    </head>
+    <body>
+        <!-- Title Banner -->
+        <div id="banner">
+            <h1 id="bannertext">Mini-Games by Jonah, Jake, Tanay, and Kyle</h1>
+        </div>
+
+        <!-- Cross Section Dividers / T section-->
+        <div id="divider1"></div>
+        <div id="divider2"></div>
+        <!--<div id="divider3"></div>-->
+
+        <!-- Left Segment: Game Links -->
+        <div id="games">
+            <h2><u>Games List</u></h2>
+            <table>
+                <tr>
+                    <td>
+                        <input type="button" onclick="window.location.href='../asteroids/index.html'" value="Asteroids" class="gamebutton">
+                        <br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="window.location.href='../memory/memory.html'" value="Memory Cards" class="gamebutton">
+                        <br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="window.location.href='../snake/snake_index.html'" value="Snake" class="gamebutton">
+                        <br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="window.location.href='../typing-speed-game/index.html'" value="Typing Speed" class="gamebutton">
+                        <br><br><br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="window.location.href='../help_page/help.html'" value="Game Help" class="gamebutton">
+                        <br><br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Top Right Segment: High Scores
+        <div id="highscore">
+            <h2><u>High Scores</u></h2>
+            <div id="scoregrid"></div>
+        </div>-->
+
+        <!-- Right Segment: -->
+        <div id="psearch">
+            <h2><u>Player Search</u></h2>
+            <table id="searchTable">
+                <tr>
+                    <td>
+                        <input type="text" id="psearchText">
+                        <input type="button" onclick=getSearch() value="Search Players" class="sebutton">
+                        <input type="button" onclick=getFriends() value="View Friends" class="sebutton">
+                        <br><br>
+                    </td>
+                </tr>
+            </table>
+            <div id="presults"></div>
+        </div>
+        <script src="./client.js"></script>
+    </body>
+</html>

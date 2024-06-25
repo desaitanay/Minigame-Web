@@ -1,0 +1,55 @@
+<!-- 
+Description: HTML for the typing speed how to play
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to play Snake Game</title>
+    <link rel="stylesheet" href="common.css"> 
+</head>
+<body>
+    <header>
+        <h1>How to play Snake</h1>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <h2>Overview</h2>
+            <p>This is the snake game where you can control your snake.</p>
+        </section>
+
+        <section class="how-to-play">
+            <h2>How to Play</h2>
+            <ul class="text"> 
+                <li>Start button to begin the game.</li>
+                <li>Reset button to play again, or reset.</li>
+                <li>Control snake direction with arrow keys.</li>
+                <li>Reaching target gives 1 point, and adds an extra segment to your snake.</li>
+                <li>Running into a wall or your own segments will end the game.</li>
+            </ul>  
+        </section>
+
+        <section class="settings">
+            <h2>Settings</h2>
+            <ul class="text">
+                <li>Settings icon on the left panel lets you select your snake / target color.</li>
+                <li>Your highest score will be displayed in the right panel.</li>
+            </ul>
+        </section>
+
+        <section class="modifiers">
+            <h2>Ouroboros Condition</h2>
+            <p>You will be playing against an AI snake.</p>
+            <ul class="text">
+                <li>The rival snake will also attempt to get to the target, and get 1 segment larger if it reaches it.</li>
+                <li>The rival is especially hungry and will eat parts of itself to get to the target, if it redirects over itself it will lose segments.</li>
+                <li>If the rival crosses the player snake, it will lose a segment. If it reduces to two or less segments, it resets.</li>
+                <li>Crossing the rival’s segments reduces your snake / score by 1 and intersecting rival when your score is 0 results in game loss.</li>
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

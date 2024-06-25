@@ -1,0 +1,181 @@
+/* 
+This file is responsible for styling index.html of the Asteroids game page
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #1f242d;
+  box-sizing: border-box;
+  /* background-color: #323c50; */
+  /* animation: flashAnimation 1s ease; */
+  /* background-color: #333; */
+}
+
+h1 {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+#leaderboards-container {
+  width: 30%;
+  /* width: 200px; */
+  /* text-align: center; */
+}
+
+#leaderboards {
+  /* display: flex; */
+  width: 100%;
+}
+
+.leaderboard-entry {
+  width: 260px;
+  margin: 10px auto;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  /* color: red; */
+  background-color: #323c50;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 20px;
+}
+
+#page-container {
+  /* background-color: #333; */
+  /* background-color: #1f242d; */
+  /* background-color: #323946; */
+  /* padding: 10px; */
+  /* text-align: center; */
+  display: flex;
+  /* display: flex; */
+  color: #fff;
+  justify-content: center;
+}
+
+#score-zone {
+  /* width: 400px; */
+  /* text-align: left; */
+  /* margin: auto 20px; */
+  /* margin: 10px auto; */
+  /* padding: 10px auto; */
+  padding: 6px 0;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* text-align: left; */
+}
+
+#scores > p {
+  margin: 8px 0;
+}
+
+#scores {
+  text-align: left;
+  width: 33.3%;
+}
+
+#gif-container {
+  width: 33.3%;
+  text-align: center;
+  /* text-align: center; */
+  overflow: hidden;
+}
+
+#level-up-gif {
+  width: 70%;
+  margin-bottom: -80px;
+  transition: margin 400ms;
+}
+
+#game-over-text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: none;
+  color: red;
+  /* margin-bottom: -80px; */
+  /* transition: margin 400ms; */
+}
+
+#ghost-container {
+  width: 33.3%;
+  text-align: right;
+}
+
+.start-btn {
+  margin-left: auto !important;
+}
+
+#asteroids-canvas {
+  /* display: none; */
+}
+
+#game-area {
+  width: 40;
+}
+
+#settings {
+  /* display: none; */
+  /* width: 200px; */
+  width: 30%;
+  /* text-align: left; */
+  /* margin: 0 auto; */
+  /* padding: 0 60px; */
+  /* margin: 20px; */
+}
+
+#colors-header {
+  /* margin-top: 50px; */
+  padding-left: 50px;
+}
+
+#animations-header {
+  margin-top: 50px;
+  padding-left: 50px;
+}
+
+#audio-header {
+  margin-top: 50px;
+  padding-left: 50px;
+}
+
+.settings-input-group {
+  /* width: 80%; */
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 50px;
+  /* margin: 0px auto 16px auto; */
+  /* margin: 16px 0; */
+}
+
+
+#pause-btn, #resume-btn {
+  display: none;
+}
+
+#return-home-link {
+  color: white;
+  margin-top: 30px;
+}
+
+@keyframes flashAnimation {
+  0%, 100% { background-color: #1f242d; }
+  50% { background-color: #323c50; }
+}
+
+/* helper */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}

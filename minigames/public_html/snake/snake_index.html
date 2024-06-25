@@ -1,0 +1,72 @@
+<!--
+This HTML file sets up pairs with the snake game code.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rattlers</title>
+        <link rel="stylesheet" type="text/css" href="./snake_style.css">
+    </head>
+    <body>
+        <!-- Title Banner -->
+        <div id="snakeBanner">
+            <h1 id="snakeBanText"> Ravenous Rattlers </h1>
+        </div>
+        <!-- Cross Sectino Divider -->
+        <div id="snakeDiv1"></div>
+
+        <!-- Game -->
+        <div id="gameArea">
+            <canvas id="gameBoard" width="650" height="500"></canvas>
+            <table id="gameTable">
+                <tr>
+                    <td class="gameCol">
+                        <button class="snakeBut" onclick="startGame()"> Start </button>
+                    </td>
+                    <td class="gameCol">
+                        <div id="scoreText">0</div>
+                    </td>
+                    <td class="gameCol">
+                        <button class="snakeBut" onclick="restart()">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings">
+            <h2><b><u> Settings: </u></b></h2>
+            <br><br>
+            <table id="setTable">
+                <tr>
+                    <td>
+                        <label for="playerColor"><b> Snake Color: </b></label>
+                        <input type="color" oninput="snakeChange()" id="playerColor" name="playerColor">
+                        <br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="targetColor"><b> Target Color: </b></label>
+                        <input type="color" oninput="targetChange()" id="targetColor" name="targetColor">
+                        <br><br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="homeBut" onclick="window.location.href='../home.html'">Home</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- High Score Tab -->
+        <div id="highSnakeScore">
+            <h2><b><u>Rattlers: High Scores</u></b></h2>
+            <div id="scoregrid"></div>
+        </div>
+
+        <script src="./snake_code.js"></script>
+    </body>
+</html>

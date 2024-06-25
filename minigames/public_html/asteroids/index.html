@@ -1,0 +1,156 @@
+<!-- 
+  this file is reponsible for displaying the markup of the Asteroids game page
+ -->
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='style.css'>
+  <title>Asteroids</title>
+</head>
+<body>
+
+  <div id='page-container'>
+
+    <!-- LEADERBOARD -->
+    <div id='leaderboards-container'>
+      <h2 class='text-center'>Your high score: <span id='user-high-score'></span></h2>
+      <br>
+      <h3 class='text-center'>Leaderboard</h3>
+      <div id='leaderboards'>
+
+      </div>
+      <div class='text-center mt-2'>
+
+        <a href='../home.html' id="return-home-link">Return to Home page</a>
+      </div>
+    </div>
+
+    <!-- GAME -->
+    <div id='game-area'>
+      <div id='score-zone'>
+
+          <div id='scores'>
+            <!-- <p>High score: <span id='high-score'>0</span></p> -->
+            <p>Score: <span id='current-score'>0</span></p>
+            <p>Level: <span id='level'>1</span></p>
+          </div>
+          <div id='gif-container'>
+            <img id='level-up-gif' src='level_up_gif.gif' alt='level_up'>
+            <h2 id='game-over-text'>Game Over</h2>
+          </div>
+          <div id='ghost-container'>
+            <button id='start-btn' onclick='startNewGame()'>Start Game</button>
+            <button id='resume-btn' onclick='resumeGame()'>Resume</button>
+            <!-- <button id='settings-btn' onclick='displaySettings()'>Settings</button> -->
+            <button id='pause-btn' onclick='pauseGame()'>Pause</button>
+          </div>
+      </div>
+
+      <canvas id='asteroids-canvas' width='600' height='600'></canvas>
+
+    </div>
+
+    <!-- SETTINGS -->
+    <div id='settings'>
+      <h2 class='text-center'>Settings</h2>
+
+      <h3 id='colors-header'>Colors</h3>
+
+      <div class='settings-input-group'>
+        <label for='background-color'>Background:</label>
+        <select name='background-color' id='background-color' onchange='onSettingsChange()'>
+          <option value='black'>Black</option>
+          <option value='white'>White</option>
+          <option value='blue'>Blue</option>
+          <option value='green'>Green</option>
+          <option value='red'>Red</option>
+          <option value='purple'>Purple</option>
+          <option value='pink'>Pink</option>
+          <option value='cyan'>Cyan</option>
+        </select>
+      </div>
+      
+      <div class='settings-input-group'>
+        <label for='ship-outer-color'>Ship outer:</label>
+        <select name='ship-outer-color' id='ship-outer-color' onchange='onSettingsChange()'>
+          <option value='black'>Black</option>
+          <option value='white' selected>White</option>
+          <option value='blue'>Blue</option>
+          <option value='green'>Green</option>
+          <option value='red'>Red</option>
+          <option value='purple'>Purple</option>
+          <option value='pink'>Pink</option>
+          <option value='cyan'>Cyan</option>
+        </select>
+      </div>
+      
+      <div class='settings-input-group'>
+        <label for='ship-inner-color'>Ship inner:</label>
+        <select name='ship-inner-color' id='ship-inner-color' onchange='onSettingsChange()'>
+          <option value='black'>Black</option>
+          <option value='white'>White</option>
+          <option value='blue'>Blue</option>
+          <option value='green'>Green</option>
+          <option value='red'>Red</option>
+          <option value='purple'>Purple</option>
+          <option value='pink'>Pink</option>
+          <option value='cyan' selected>Cyan</option>
+        </select>
+      </div>
+
+      <div class='settings-input-group'>
+        <label for='projectile-color'>Projectile:</label>
+        <select name='projectile-color' id='projectile-color' onchange='onSettingsChange()'>
+          <option value='black'>Black</option>
+          <option value='white' selected>White</option>
+          <option value='blue'>Blue</option>
+          <option value='green'>Green</option>
+          <option value='red'>Red</option>
+          <option value='purple'>Purple</option>
+          <option value='pink'>Pink</option>
+          <option value='cyan'>Cyan</option>
+        </select>
+      </div>
+      
+      <div class='settings-input-group'>
+        <label for='asteroid-color'>Asteroid:</label>
+        <select name='asteroid-color' id='asteroid-color' onchange='onSettingsChange()'>
+          <option value='black'>Black</option>
+          <option value='white' selected>White</option>
+          <option value='blue'>Blue</option>
+          <option value='green'>Green</option>
+          <option value='red'>Red</option>
+          <option value='purple'>Purple</option>
+          <option value='pink'>Pink</option>
+          <option value='cyan'>Cyan</option>
+        </select>
+      </div>
+
+      <h3 id='audio-header'>Audio</h3>
+
+      <div class='settings-input-group'>
+        <label for='enable-sound'>Enable sound:</label>
+        <input type='checkbox' id='enable-sound' name='enable-sound' checked onchange='onSettingsChange()'>
+      </div>
+
+      <div class='settings-input-group'>
+        <label for='volume'>Volume:</label>
+        <input type='range' min='0' max='100' value='100' class='slider' id='volume' onchange='onSettingsChange()'>
+      </div>
+
+
+      <div class='text-center'>
+        <button id='reset-to-default-btn' onclick='resetSettings()'>Reset to default</button>
+        <br>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <script src='asteroids.js'></script>
+</body>
+</html>

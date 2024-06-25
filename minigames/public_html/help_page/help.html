@@ -1,0 +1,57 @@
+<!-- 
+Description: HTML for the main help page
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How To Play</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <!--Main help body-->
+        <div class="container">
+            <div class="help-wrapper">
+                <div class="help">
+                    <h1>How to Play</h1>
+                    <div class="options">
+                        <div class="option" data-url="card_help.html">
+                            <i class="fa-solid fa-diamond"></i>
+                            <h2>Memory Card</h2>
+                            <p>Click here to learn how to play the memory card game</p>
+                        </div>
+                        <div class="option" data-url="snake_help.html">
+                            <i class="fa-solid fa-staff-snake"></i>
+                            <h2>Snake</h2>
+                            <p>Click here more to learn how to play snake</p>
+                        </div>
+                        <div class="option" data-url="typing_help.html">
+                            <i class="fa-solid fa-keyboard"></i>
+                            <h2>Typing Speed</h2>
+                            <p>Click here to learn how to play the typing speed game</p>
+                        </div>
+                        <div class="option" data-url="asteroid_help.html">                           
+                            <i class="fa-solid fa-meteor"></i>
+                            <h2>Asteroids</h2>
+                            <p>Click here to learn how to play asteroids</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!--Js logic to open a url when clicked on the div-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var clickableDivs = document.querySelectorAll('.option');
+                clickableDivs.forEach(function(div) {
+                    div.addEventListener('click', function() {
+                        var url = this.getAttribute('data-url'); 
+                        window.location.href = url;
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

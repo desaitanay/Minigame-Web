@@ -1,0 +1,56 @@
+<!-- 
+Description: HTML for the memory card how to play page.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to play Memory Card Game</title>
+    <link rel="stylesheet" href="common.css"> 
+</head>
+<body>
+    <header>
+        <h1>How to play Memory Card</h1>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <h2>Overview</h2>
+            <p>The premise of this game is to correctly identify pairs of numbers within a set of cards.</p>
+        </section>
+
+        <section class="how-to-play">
+            <h2>How to Play</h2>
+            <ul class="text"> 
+                <li>Upon starting a game, you will be shown all cards face-up for 5 seconds to give you a chance to memorize them.</li>
+                <li>The cards will then be turned face down and you must find the pairs again.</li>
+                <li>Correct matches will leave the cards face-up, while incorrect pairs will be turned back face-down.</li>
+                <li>You win by matching every card on the board, and you lose by either running out of time or exceeding the maximum number of fails.</li>
+            </ul>  
+        </section>
+
+        <section class="settings">
+            <h2>Settings</h2>
+            <ul class="text">
+                <li>The Theme option allows you to change the theme of the website between a peaceful, flower-like theme and a deadly, nightmarish theme</li>
+                <li>The difficulty option allows you to pick the difficulty of the game. Easy is a 4x4 grid of cards, medium is a 6x4 grid, hard is an 8x4 grid, and expert is an 8x6 grid.<br>
+				Higher difficutly = greater multiplier. This affects both your base score and the amount lost per fail. Higher risk, but higher potential reward!</li>
+                <li>The Max Fails option allows you to set the maximum allotted fails for the game. A fail occurs when you click the second card in a pair and it does not match the first.</li>
+                <li>The Max Time option allows you to set the maximum allowed time to complete the game. </li>
+            </ul>
+        </section>
+
+        <section class="modifiers">
+            <h2>Party Modifiers</h2>
+            <p>Party modifiers are bonus settings for the game that either change the visuals or gameplay in a unique way. If any party modifiers are active, a win in the game will not be added to the leaderboard.</p>
+            <ul class="text">
+                <li>The Bombs mode adds a pair of bombs to the grid of cards. If the user matches the pair of bombs, they automatically lose the game.</li>
+                <li>The Disco mode makes the colors of all cards random. There is no correlation between colors and pairs, it is completely random.</li>
+                <li>The Hardcore mode makes it so that anytime the user fails, all cards are shuffled to random positions.</li>
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
